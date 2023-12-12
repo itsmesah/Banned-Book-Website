@@ -3,7 +3,7 @@ body {
     font-family: 'Playfair Display', serif;
     color: #a5a58d;
     background-color: #0a0a0a; /* Dark background for the body */
-    background-image: url('path-to-your-texture-image.jpg'); /* A texture background image */
+    background-image: url('darkbackground.jpg'); /* A texture background image */
     background-blend-mode: multiply; /* Blend the texture with the background color */
     line-height: 1.6;
     max-width: 800px;
