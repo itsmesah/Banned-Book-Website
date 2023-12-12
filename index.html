@@ -1,166 +1,85 @@
-/* Dark Academia theme in dark mode */
-body {
-    font-family: 'Playfair Display', serif;
-    color: #a5a58d;
-    background-color: #0a0a0a;
-    line-height: 1.6;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-header {
-    background-color: #1c1c1e;
-    color: #d4d4cd;
-    padding: 1rem 0;
-    text-align: center;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 10px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #d4d4cd;
-    transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
-    color: #b6a19e;
-}
-
-main {
-    background-color: #121212;
-    border: 1px solid #2c2c2e;
-    margin: 20px 0;
-    padding: 20px;
-}
-
-#books, aside#banned-books {
-    background-color: #1e1e20;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    padding: 1em;
-    margin-bottom: 20px;
-}
-
-#books ul, aside#banned-books ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-#books li, aside#banned-books li {
-    padding: 0.5em 0;
-}
-
-footer {
-    background-color: #1c1c1e;
-    color: #d4d4cd;
-    text-align: center;
-    padding: 1em 0;
-    margin-top: 20px;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    color: #c9c9b7;
-}
-
-a {
-    color: #d4d4cd;
-    text-decoration: none;
-}
-
-a:hover {
-    color: #b6a19e;
-}
-
-/* Modal styling */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.4);
-}
-
-.modal-content {
-    background-color: #fefefe;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-}
-
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-/* Sidebar styling */
-#sidebar {
-    position: fixed;
-    left: -250px;
-    width: 250px;
-    height: 100%;
-    background-color: #1e1e20;
-    transition: left 0.3s;
-}
-
-#sidebar.visible {
-    left: 0;
-}
-
-#sidebar-toggle {
-    position: fixed;
-    left: 10px;
-    top: 10px;
-}
-
-/* Image Gallery Slider */
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
-}
-
-.mySlides {
-  display: none;
-}
-
-/* Responsive Typography */
-@media (max-width: 768px) {
-    body {
-        padding: 10px;
-    }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reading Resources Hub</title>
+    <link rel="stylesheet" href="darkacademic.css">
+</head>
+<body>
+    <header>
+        <h1>Reading Resources Hub</h1>
+        <nav>
+            <ul>
+                <li><a href="#books">Books</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
     
-    h1 {
-        font-size: 1.8rem;
-    }
-
-    h2 {
-        font-size: 1.6rem;
-    }
-
-    h3 {
-        font-size: 1.4rem;
-    }
-}
+    <main>
+        <!-- Search Functionality -->
+        <input type="text" id="search-input" placeholder="Search books...">
+        <div id="books-list">
+            <!-- Books go here -->
+        </div>
+        
+        <!-- Sidebar Toggle Button -->
+        <button id="sidebar-toggle">Toggle Sidebar</button>
+        
+        <!-- Expandable Sidebar -->
+        <aside id="sidebar">
+            <h2>Resources</h2>
+            <nav>
+                <ul>
+                    <li><a href="https://www.gutenberg.org/" target="_blank">Project Gutenberg</a></li>
+                    <li><a href="https://www.penguinrandomhouse.com/the-read-down/banned-and-challenged-books" target="_blank">Banned Books - Penguin Random House</a></li>
+                    <!-- More links here -->
+                </ul>
+            </nav>
+        </aside>
+        
+        <!-- Modal Pop-Up Trigger Button -->
+        <button id="open-modal">Subscribe / Contact</button>
+        
+        <!-- Modal Pop-Up Structure -->
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span id="close-modal" class="close">&times;</span>
+                <p>Subscribe to our newsletter or send us a message.</p>
+                <!-- Subscription form or contact form goes here -->
+            </div>
+        </div>
+        
+        <!-- Dark Mode Toggle Button -->
+        <button id="dark-mode-toggle">Dark Mode</button>
+        
+        <!-- Image Gallery Slider (just the structure) -->
+        <div class="slideshow-container">
+            <div class="mySlides">
+                <img src="book-image1.jpg" style="width:100%">
+            </div>
+            <div class="mySlides">
+                <img src="book-image2.jpg" style="width:100%">
+            </div>
+            <!-- More slides here -->
+        </div>
+        
+        <!-- Banned Books Section -->
+        <section id="banned-books">
+            <h2>Banned Books & Reasons</h2>
+            <ul>
+                <li><strong>Book Title 1</strong> - Reason for ban</li>
+                <!-- More banned books here -->
+            </ul>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2023 Reading Resources Hub</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
