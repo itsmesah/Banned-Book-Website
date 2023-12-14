@@ -2,18 +2,20 @@
 body {
     font-family: 'Playfair Display', serif;
     color: #a5a58d;
-    background-color: #0a0a0a;
+    background: url('https://github.com/itsmesah/Banned-Book-Website/blob/main/darkbackground.jpg?raw=true') no-repeat center center fixed;
+    background-size: cover;
+    filter: brightness(75%); /* Adjust brightness */
     line-height: 1.6;
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
+    text-align: center;
 }
 
 header {
-    background-color: #1c1c1e;
-    color: #d4d4cd;
+    background-color: #3a2e2b; /* Dark brown background for the header */
+    color: #dcd0c0; /* Creamy text color for readability */
     padding: 1rem 0;
-    text-align: center;
 }
 
 nav ul {
@@ -28,16 +30,15 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #d4d4cd;
-    transition: color 0.3s ease;
+    color: #dcd0c0; /* Text color for links */
 }
 
 nav ul li a:hover {
-    color: #b6a19e;
+    color: #a49688; /* Slightly lighter color on hover for interactivity */
 }
 
 main {
-    background-color: #121212;
+    background-color: #2c2220; /* Deep brown background for the main content */
     border: 1px solid #2c2c2e;
     margin: 20px 0;
     padding: 20px;
@@ -60,8 +61,8 @@ main {
 }
 
 footer {
-    background-color: #1c1c1e;
-    color: #d4d4cd;
+    background-color: #3a2e2b;
+    color: #dcd0c0;
     text-align: center;
     padding: 1em 0;
     margin-top: 20px;
@@ -72,12 +73,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a {
-    color: #d4d4cd;
+    color: #dcd0c0;
     text-decoration: none;
 }
 
 a:hover {
-    color: #b6a19e;
+    color: #a49688;
 }
 
 /* Modal styling */
@@ -94,7 +95,8 @@ a:hover {
 }
 
 .modal-content {
-    background-color: #fefefe;
+    background-color: #2c2220;
+    color: #dcd0c0;
     margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
