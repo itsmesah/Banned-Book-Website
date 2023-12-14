@@ -4,7 +4,7 @@ body {
     color: #a5a58d;
     background: url('https://github.com/itsmesah/Banned-Book-Website/blob/main/darkbackground.jpg?raw=true') no-repeat center center fixed;
     background-size: cover;
-    filter: brightness(125%); /* Adjust brightness */
+    filter: brightness(75%); /* Adjust brightness */
     line-height: 1.6;
     max-width: 800px;
     margin: 0 auto;
