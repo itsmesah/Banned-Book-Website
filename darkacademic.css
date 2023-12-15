@@ -125,6 +125,7 @@ a:hover {
     height: 100%;
     background-color: #1e1e20;
     transition: left 0.3s;
+    padding: 20px; /* Add padding to the sidebar */
 }
 
 #sidebar.visible {
@@ -135,7 +136,9 @@ a:hover {
     position: fixed;
     left: 10px;
     top: 10px;
+    z-index: 1; /* Ensure it's above the sidebar */
 }
+
 
 /* Image Gallery Slider */
 .slideshow-container {
