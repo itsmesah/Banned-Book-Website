@@ -46,6 +46,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Image Gallery Slider - Example Functionality
     let slideIndex = 0;
+    showSlides();
+
     function showSlides() {
         let i;
         const slides = document.getElementsByClassName("mySlides");
@@ -57,5 +59,5 @@ document.addEventListener('DOMContentLoaded', () => {
         slides[slideIndex - 1].style.display = "block";  
         setTimeout(showSlides, 4000); // Change every 4 seconds
     }
-    showSlides();
 });
+
